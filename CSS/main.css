@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    font-size: 0.8rem;
+    background-image:url("初音未来.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.fix{
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    z-index: 9999;
+    border-radius: 7px;
+    background-color: #a3a090;
+    color: #fff;
+}
+
+header {
+    background-color: rgba(125, 169, 211, 0.8);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    height: auto;
+}
+
+nav ul li {
+    transition: background-color 1.0s linear;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4d5c5e;
+    font-weight: 600;
+    transition: color 1.0s linear;
+}
+
+nav ul li:hover {
+    background-color: #69b0d1;
+    scroll-behavior: smooth;
+    > a {
+        color: #fff;
+    }
+}
+
+.hero {
+    background: rgba(255,255,255,0.7);
+    color: rgb(0,63,53);
+    padding: 80px 0;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 3rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: rgb(0,63,53);
+    color: rgb(255, 236, 239);
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.post-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.post-image {
+    height: 200px;
+    background-color: #eee;
+    background-size: cover;
+    background-position: center;
+}
+
+.post-content {
+    padding: 25px;
+}
+
+.post-date {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.post-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.post-excerpt {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer {
+    width: 100%;
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #2575fc;
+}
+
+.copyright {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 15px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .no_to_see {
+        display: none; 
+    }
+
+    .to-see  {
+        display: flex; 
+    }
+
+    .btn{
+        font: 0.6em 'Helvetica Neue';
+    }
+
+    .social-links a {
+        color: white;
+        margin: 0 10px;
+        font-size: 0.8rem;
+        transition: color 0.3s;
+    }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .post-image {
+        height: 150px;
+    }
+    .to-see{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 993px){
+    .to-see{
+        display: none;
+    }
+}
+

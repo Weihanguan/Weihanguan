@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/index.css"></link>
+    <link rel="stylesheet" href="./CSS/myself.css"></link>
+    <title>Document</title>
+</head>
+<body>
+    <header id="pageHeader">
+        <div class="container header-content" style="color: cornflowerblue;">
+            <a href="main.html" class="logo">Weihanguan's blog</a>
+            <nav>
+                <ul>
+                    <li><a href="main.html">首页</a></li>
+                    <li><a href="my_self.html">介绍</a></li>
+                    <li class="no_to_see"><a href="profession.html">我的专业</a></li>
+                    <li><a href="mystudy_way.html">学习路线</a></li>
+                    <li class="no_to_see"><a href="my_honor.html">获奖</a></li>
+                    <li class="no_to_see"><a href="activity.html">活动</a></li>
+                </ul>
+                <ul class="to-see">
+                    <li><a href="profession.html">我的专业</a></li>
+                    <li><a href="activity.html">活动</a></li>
+                    <li><a href="my_honor.html">获奖</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="about-me" id="conImage" width="100%">
+        <div class="ABOUT">ABOUT ME</div>
+    </div>
+
+    <a href="#" class="fix" ><img src="./CSS/回到顶部.svg" alt="没有加载出来哦" width=100%></a>
+
+    <section class="content-section">
+        <div class="container" style="margin: 20px auto;">
+            <div class="myself ani-ac">
+                <div class="myself-img_with_text">
+                    <div class="myself-img">
+                        <img src=".\CSS\四中陶菲克.png" alt="描述文字">
+                    </div>
+                    <div class="myself-text" style="align-items: center;">
+                        <h2 style="text-align: center;">关于我</h2>
+                        <p>一个平平无奇的大一学生,喜欢编程和羽毛球，但是又菜又爱玩，你可以称我为四中陶菲克</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="myself ani-ac"  style="align-items: center;">
+                <div class="myself-img_with_text">
+                    <div class="myself-img">
+                        <img src="./CSS/假装高手.jpg" alt="描述文字">
+                    </div>
+                    <div class="myself-text">
+                        <h2 style="text-align: center;">关于团队</h2>
+                        <p>励志于参见各种比赛提升自己，有各种省奖国奖大佬，至于这里为什么放一张农图，那是因为没有证据证明他们拿了奖，绝对不是假装我玩农有点实力（其实图是撞车到的</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="myself ani-ac"  style="align-items: center;">
+                <div class="myself-img_with_text">
+                    <div class="myself-img">
+                        <img src="./CSS/炮姐.jpeg" alt="描述文字">
+                    </div>
+                    <div class="myself-text">
+                        <h2 style="text-align: center;">
+                             <a href="#" onclick="openWechatModal()">点击加入我们（致电我的WeChat）</a>
+                        </h2>
+                        <p>是的，加入我们可以找到更快提升自己编程的途径，你可以认识到各种领域的大佬，还有很多小美小帅（本来想放自己的帅照的，但是太抽象了bushi）</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 微信二维码模态框 -->
+    <div id="wechatModal" class="modal">
+        <span class="close-btn">&times;</span>
+        <img src="./CSS/wx名片.jpg" alt="微信二维码" class="modal-content">
+    </div>
+    <script src="./Javascript/web.js"></script>
+</body>
+</html>

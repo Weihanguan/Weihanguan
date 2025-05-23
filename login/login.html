@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>登录 - 我的博客</title>
+    <link rel="stylesheet" href="../CSS/login.css" />
+</head>
+<body>
+
+<!-- 背景容器 -->
+<div class="background-container" id="bgContainer">
+    <div class="background-layer" id="bgLayer"></div>
+</div>
+
+<!-- 登录弹窗 -->
+<div class="modal-window">
+    <div class="modal-content">
+        <h2>欢迎回来！</h2>
+        <form id="loginForm" action="/login" method="POST">
+            <input type="text" name="username" placeholder="用户名" required/>
+            <input type="password" name="password" placeholder="密码" required/>
+            <button type="submit">登录</button>
+            <p class="register-link">还没有账号？<a href="#">立即注册</a></p>
+        </form>
+    </div>
+</div>
+
+<!-- JS 控制背景位移 -->
+<script src="../Javascript/login.js"></script>
+</body>
+</html>

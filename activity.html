@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/index.css"></link>
+    <link rel="stylesheet" href="./CSS/activity.css"></link>
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        <div class="container header-content">
+            <a href="main.html" class="logo">Weihanguan's blog</a>
+            <nav>
+                <ul>
+                    <li><a href="main.html">首页</a></li>
+                    <li><a href="my_self.html">介绍</a></li>
+                    <li class="no_to_see"><a href="profession.html">我的专业</a></li>
+                    <li><a href="mystudy_way.html">学习路线</a></li>
+                    <li class="no_to_see"><a href="my_honor.html">获奖</a></li>
+                    <li class="no_to_see"><a href="activity.html">活动</a></li>
+                </ul>
+                <ul class="to-see">
+                    <li><a href="profession.html">我的专业</a></li>
+                    <li><a href="activity.html">活动</a></li>
+                    <li><a href="my_honor.html">获奖</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <a href="#" class="fix" ><img src="./CSS/回到顶部.svg" alt="没有加载出来哦" width=100%></a>
+
+    <div class="container" style="padding-top: 20px; padding-bottom: 20px; background-color: rgba(255, 255, 255, 0.5);">
+        <div class="carousel">
+            <img src="./CSS/active1.jpg"   class="active" alt="1">
+            <img src="./CSS/active2.jpg" alt="2">
+            <img src="./CSS/active3.jpg" alt="3">
+        </div>
+    </div>
+    
+    <div class = "container" style="padding: 15px; background-color: rgba(255, 255, 255, 0.5);"><!-- 其实都可以用js 因为太多重复 来完成，但是懒得写了 -->
+            <!-- 缩略图 -->
+        <div style="color: rgb(18, 52, 68); font: 3rem bolder;">活动</div>
+        <div class="video-thumbnail ani-ac" onclick="openModal()">
+            <img src="./CSS/仰卧起坐.jpg" alt="视频缩略图">
+            <div class="play-button">▶</div>
+        </div>
+        
+        <!-- 模态框 -->
+        <div class="modal" id="videoModal">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <video controls id="modalVideo">
+                    <source src="./CSS/active1.mp4" type="video/mp4">
+                    您的浏览器不支持HTML5视频
+                </video>
+            </div>
+        </div>
+
+        <div class="video-thumbnail ani-ac" onclick="openModal()">
+            <img src="./CSS/跳大绳.jpg" alt="视频缩略图">
+            <div class="play-button">▶</div>
+        </div>
+        
+        <div class="modal" id="videoModal">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <video controls id="modalVideo">
+                    <source src="./CSS/active1.mp4" type="video/mp4">
+                    您的浏览器不支持HTML5视频
+                </video>
+            </div>
+        </div>
+
+        <div class="video-thumbnail ani-ac" onclick="openModal()">
+            <img src="./CSS/无敌风火轮.jpg" alt="视频缩略图">
+            <div class="play-button">▶</div>
+        </div>
+        
+        <div class="modal" id="videoModal">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <video controls id="modalVideo">
+                    <source src="./CSS/active1.mp4" type="video/mp4">
+                    您的浏览器不支持HTML5视频
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <script src="./Javascript/web.js"></script>
+</body>
+</html>

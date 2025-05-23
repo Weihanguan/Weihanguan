@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/Article.css"></link>
+    <title>Document</title>
+    <style>
+        .masonry-container {
+            column-count: 3;
+            column-gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .masonry-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 1rem;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="main.html" class="logo">Weihanguan's blog</a>
+            <nav>
+                <ul>
+                    <li><a href="main.html">首页</a></li>
+                    <li><a href="my_self.html">介绍</a></li>
+                    <li class="no_to_see"><a href="profession.html">我的专业</a></li>
+                    <li><a href="mystudy_way.html">学习路线</a></li>
+                    <li class="no_to_see"><a href="my_honor.html">获奖</a></li>
+                    <li class="no_to_see"><a href="activity.html">活动</a></li>
+                </ul>
+                <ul class="to-see">
+                    <li><a href="profession.html">我的专业</a></li>
+                    <li><a href="activity.html">活动</a></li>
+                    <li><a href="my_honor.html">获奖</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <a href="#" class="fix" ><img src="./CSS/回到顶部.svg" alt="没有加载出来哦" width=100%></a>
+
+
+    <!-- 瀑布流容器 -->
+    <div class="masonry-container" id="masonryContainer">
+        <!-- 图片卡片会通过 JS 动态插入 -->
+    </div>
+
+    <div class="loading" id="loading">加载中...</div>
+
+    <script>
+        // 模拟图片数据源（你可以替换成你自己的图片路径）
+        const imageList = [
+            "./CSS/蓝桥.jpg",
+            "./CSS/水赛.jpg",
+            "./CSS/花花.jpg",
+            "./CSS/壁炉.jpg",
+            "./CSS/一剑开天穹.jpg",
+            "./CSS/往日.jpg",
+            "./CSS/奖状7.jpg",
+            "./CSS/奖状8.jpg",
+            "./CSS/奖状9.jpg",
+            "./CSS/奖状10.jpg",
+            "./CSS/奖状11.jpg",
+            "./CSS/奖状12.jpg"
+        ];
+
+        let loadedCount = 0;
+        const container = document.getElementById('masonryContainer');
+        const loading = document.getElementById('loading');
+
+        function loadImages(count = 6) {
+            loading.style.display = 'block';
+            setTimeout(() => {
+                for (let i = 0; i < count && loadedCount < imageList.length; i++) {
+                    const item = document.createElement('div');
+                    item.className = 'masonry-item';
+
+                    const img = document.createElement('img');
+                    img.src = imageList[loadedCount++];
+                    img.alt = '获奖图片';
+
+                    item.appendChild(img);
+                    container.appendChild(item);
+                }
+                loading.style.display = 'none';
+            }, 800); // 模拟网络延迟
+        }
+
+        // 初始加载一批
+        loadImages();
+
+        // 监听滚动事件，实现“下拉加载”
+        window.addEventListener('scroll', () => {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500 &&
+                loadedCount < imageList.length) {
+                loadImages();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    background-color: #111;
+}
+
+/* 背景容器 */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.background-layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 110%;
+    height: 110%;
+    background-image: url('../CSS/凌波丽.jpg'); /* 替换为你的图片路径 */
+    background-size: cover;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
+    z-index: -1;
+}
+
+/* 登录弹窗 */
+.modal-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.3); /* 半透明遮罩 */
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.596);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeInUp 1s ease forwards;
+    border: 1px solid #ddd;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 1rem;
+}
+
+input:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 0 2px rgba(37, 117, 252, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1a5dc8;
+}
+
+.register-link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.register-link a {
+    color: #2575fc;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
